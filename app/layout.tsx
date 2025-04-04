@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 
-import { Provider } from "jotai";
-
 import "./globals.css";
 import Script from "next/script";
 
@@ -34,9 +32,7 @@ export default function RootLayout({
           src="//unpkg.com/react-scan/dist/auto.global.js"
         />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Provider>{children}</Provider>
-      </body>
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>{children}</body>
     </html>
   );
 }
